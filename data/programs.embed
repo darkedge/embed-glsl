@@ -1,0 +1,9 @@
+myprogram
+{
+	VertexShader = "..\..\test.vert";
+	GeometryShader = "..\..\test.frag";
+	ComputeShader = "..\..\wut.geom";
+	TessellationControlShader = "..\..\wut.geom";
+	TessellationEvaluationShader = "..\..\wut.geom";
+	FragmentShader = "..\..\wut.geom";
+}

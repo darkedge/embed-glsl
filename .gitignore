@@ -194,3 +194,13 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+vs/tmp
+Win32-Debug
+Win32-Release
+x64-Debug
+x64-Release
+*.sublime-workspace
+*.nativecodeanalysis.xml
+*.filters
+*.nvuser
