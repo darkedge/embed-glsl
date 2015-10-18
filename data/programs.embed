@@ -1,9 +1,63 @@
-myprogram
+// Comment test
+Diffuse
 {
-	VertexShader = "..\..\test.vert";
-	GeometryShader = "..\..\test.frag";
-	ComputeShader = "..\..\wut.geom";
-	TessellationControlShader = "..\..\wut.geom";
-	TessellationEvaluationShader = "..\..\wut.geom";
-	FragmentShader = "..\..\wut.geom";
+	VertexShader = "Diffuse.vert";
+	FragmentShader = "Diffuse.frag";
+}
+
+GUI
+{
+	VertexShader = "GUI.vert";
+	FragmentShader = /* block comment test */"GUI.frag";
+}
+
+LensFlare
+{
+	VertexShader = "LensFlare.vert";
+	FragmentShader = "LensFlare.frag";
+}
+
+/*
+	Block comment test
+*/
+Particle
+{
+	VertexShader = "Particle.vert";
+	FragmentShader = "Particle.frag";
+}
+
+PostProcessing
+{
+	VertexShader = "PostProcessing.vert";
+	FragmentShader = "PostProcessing.frag";
+}
+
+Query
+{
+	VertexShader = "Query.vert"; // Line comment test 2
+	FragmentShader = "Query.frag";
+}
+
+Sky
+{
+	VertexShader = "Sky.vert";
+	FragmentShader = "Sky.frag";
+}
+
+Specular
+{
+	VertexShader = "Specular.vert";
+	FragmentShader = "Specular.frag";
+}
+
+Unlit
+{
+	VertexShader = "Unlit.vert";
+	FragmentShader = "Unlit.frag";
+}
+
+Water
+{
+	VertexShader = "Water.vert";
+	FragmentShader = "Water.frag";
 }

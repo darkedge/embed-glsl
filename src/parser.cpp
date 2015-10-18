@@ -17,18 +17,6 @@ enum ShaderType {
 
 bool s_success = true;
 
-struct Program {
-	std::string name;
-
-	// Paths
-	std::string vertexShader;
-	std::string tessellationControlShader;
-	std::string tessellationEvaluationShader;
-	std::string geometryShader;
-	std::string fragmentShader;
-	std::string computeShader;
-};
-
 std::vector<Program> s_programs;
 
 Program s_currentProgram;
@@ -101,6 +89,7 @@ void OnIdentifier(const char *str) {
 	case AfterCloseBrace:
 		s_state = AfterIdentifier;
 
+		printf("Adding program: %s\n", str);
 		s_currentProgram.name = str;
 
 		break;
@@ -151,22 +140,22 @@ void OnKeyword(const char *str){
 	case AfterSemicolon:
 		s_state = AfterKeyword;
 
-		if (_stricmp("VertexShader", str) == 0) {
+		if (strcmp("VertexShader", str) == 0) {
 			s_currentShader = VertexShader;
 		}
-		else if (_stricmp("TessellationControlShader", str) == 0) {
+		else if (strcmp("TessellationControlShader", str) == 0) {
 			s_currentShader = TessellationControlShader;
 		}
-		else if (_stricmp("TessellationEvaluationShader", str) == 0) {
+		else if (strcmp("TessellationEvaluationShader", str) == 0) {
 			s_currentShader = TessellationEvaluationShader;
 		}
-		else if (_stricmp("GeometryShader", str) == 0) {
+		else if (strcmp("GeometryShader", str) == 0) {
 			s_currentShader = GeometryShader;
 		}
-		else if (_stricmp("FragmentShader", str) == 0) {
+		else if (strcmp("FragmentShader", str) == 0) {
 			s_currentShader = FragmentShader;
 		}
-		else if (_stricmp("ComputeShader", str) == 0) {
+		else if (strcmp("ComputeShader", str) == 0) {
 			s_currentShader = ComputeShader;
 		}
 
